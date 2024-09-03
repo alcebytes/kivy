@@ -101,7 +101,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: osx_wheels
         path: dist
@@ -147,7 +147,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: osx_wheels
           path: dist
@@ -159,7 +159,7 @@ jobs:
         run: |
           source .ci/ubuntu_ci.sh
           install_kivy_wheel
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: osx_examples_wheel
           path: dist
@@ -233,7 +233,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: osx_app
           path: app
@@ -261,7 +261,7 @@ jobs:
         run: |
           source .ci/osx_ci.sh
           mount_osx_app
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: osx_examples_wheel
           path: dist
